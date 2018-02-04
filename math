@@ -1,0 +1,52 @@
+pragma solidity ^0.4.18;
+
+contract Math {
+
+    int num1 = 0;
+    
+    function getNum1 () public returns (int) {
+        return num1;
+    }
+    
+    function resetNum1() public returns (int) {
+        num1 = 0;
+        return num1;
+    }
+    
+    function add(int _num2) public returns (int) {
+        num1 += _num2;
+        return num1;
+    }
+    
+    function subtract(int _num2) public returns (int) {
+        num1 -= _num2;
+        return num1;
+    }
+    
+    function multiply(int _num2) public returns (int) {
+        num1 *= _num2;
+        return num1;
+    }
+    
+    function divide(int _num2) public returns (int) {
+        if (_num2 != 0) {
+            num1 /= _num2;
+        }
+        
+        return num1;
+    }
+    
+    function power(uint _num2) public returns (int) {
+        num1 = int(uint(num1) ** _num2);
+        return num1;
+    }
+    
+    function remainder(int _num2) public returns (int) {
+        if (_num2 != 0) {
+            num1 %= _num2;
+        }
+        
+        return num1;
+    }
+    
+}
